@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="VerkkoNet Developer Training - Demo">
+<title>Quiz Application in JS - Demo</title>
+<style type="text/css">
+	    #freezeLayer {
+	        position: fixed;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+	        height: 100vh;
+	        background: #fff;
+	        
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        font-size: 20px;
+	    }
+	    #freezeLayer.msg{
+	        width: 900px;
+            margin-bottom: 30px;
+            padding: 20px 10px;
+            background: #D30000;
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
+            height: 200px;
+            flex-direction: column;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+	    }
+	</style>
+</head>
+<body>
+<div id="container">
+
+
+<script type="c9bc336a289030c0e515d6f4-text/javascript">
+ ready(function() {
+    
+    // Function called if AdBlock is not detected
+    function adBlockNotDetected() {
+    	document.getElementById('freezeLayer').style.display = 'none';
+    }
+    
+    // Function called if AdBlock is detected
+    function adBlockDetected() {
+        var f = document.getElementById('freezeLayer');
+        f.classList.add('msg');
+        f.innerHTML='<p>Our website is made possible by displaying online advertisements to our visitors.</p><p>Please consider supporting us by disabling your ad blocker.</p>';
+    	document.getElementById('container').innerHTML = '';
+    }
+    
+    // Recommended audit because AdBlock lock the file 'blockadblock.js' 
+    // If the file is not called, the variable does not exist 'blockAdBlock'
+    // This means that AdBlock is present
+    if(typeof blockAdBlock === 'undefined') {
+    	adBlockDetected();
+    } else {
+    	blockAdBlock.onDetected(adBlockDetected);
+    	blockAdBlock.onNotDetected(adBlockNotDetected);
+    	// and|or
+    	blockAdBlock.on(true, adBlockDetected);
+    	blockAdBlock.on(false, adBlockNotDetected);
+    	// and|or
+    	blockAdBlock.on(true, adBlockDetected).onNotDetected(adBlockNotDetected);
+    }
+}, false);
+ 
+</script>
+
+<script type="c9bc336a289030c0e515d6f4-text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5be92d7970ff5a5a3a71ba56/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93486751-1" type="c9bc336a289030c0e515d6f4-text/javascript"></script>
+<script type="c9bc336a289030c0e515d6f4-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-93486751-1');
+</script>
+</div>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/a2bd7673/cloudflare-static/rocket-loader.min.js" data-cf-settings="c9bc336a289030c0e515d6f4-|49" defer=""></script></body>
+</html>
